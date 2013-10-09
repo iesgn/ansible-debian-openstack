@@ -20,9 +20,7 @@
 
 - name: DB sync for keystone
   shell: >
-    creates=/etc/keystone/db.synced
     /usr/bin/keystone-manage db_sync
-    touch /etc/keystone/db.synced
   notify: restart keystone
 
 # Tenants, roles and keystone users creation
