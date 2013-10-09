@@ -1,0 +1,24 @@
+- name: Install and configure ntp
+  copy: >
+    src=etc/ntp.conf
+    dest=/etc/ntp.conf
+    owner=root
+    group=root
+    mode=0644
+  notify: restart ntp
+
+- name: ensure rabbitmq is installed
+  apt: pkg=rabbitmq-server
+
+- name: ensure openstack rabbitmq user password is changed
+  rabbitmq_user: >
+    user={{ rabbit_user }}
+    password={{ rabbit_password }}
+    vhost=/
+    configure_priv=.*
+    read_priv=.*
+    write_priv=.*
+    state=present
+    force=yes
+
+- include: mysql.yml

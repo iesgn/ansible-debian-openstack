@@ -1,0 +1,15 @@
+- name: Ensure sources.list includes gplhost repo
+  copy: >
+    src=etc/apt/sources.list
+    dest=/etc/apt/sources.list
+    owner=root
+    group=root
+    mode=0644
+  notify: apt update
+
+- name: Ensure gplhost repository key is present
+  apt_key: >
+    id=0B849883
+    url=http://ftp.gplhost.com/debian/repository_key.asc
+    state=present
+  notify: apt update

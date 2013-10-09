@@ -1,0 +1,15 @@
+# Rabbit
+rabbit_user: "openstack"
+rabbit_password: "asdasd"
+
+# IPs
+controller_ip: 10.0.10.10
+storage_ip: 10.0.10.13
+
+# MySQL passwords
+root_db_password: "asdasd" 
+keystone_db_password: "asdasd"
+glance_db_password: "asdasd"
+cinder_db_password: "asdasd"
+nova_db_password: "asdasd"
+quantum_db_password: "asdasd"

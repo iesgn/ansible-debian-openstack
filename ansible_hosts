@@ -1,0 +1,11 @@
+[controller-nodes]
+controller ansible_ssh_host=10.0.10.10
+
+[net-nodes]
+netnode    ansible_ssh_host=10.0.10.11
+
+[storage-nodes]
+storagenode	ansible_ssh_host=10.0.10.13
+
+[compute-nodes]
+compute1 ansible_ssh_host=10.0.10.12
