@@ -1,2 +1,0 @@
-- name: stop ntp service
-  service: name=ntp state=stopped enabled=no
