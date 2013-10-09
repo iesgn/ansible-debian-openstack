@@ -8,10 +8,6 @@
   roles:
     - role: controller
 
-- hosts: net-nodes
-  roles:
-    - role: net
-      
 - hosts: storage-nodes
   roles: 
     - role: storage
