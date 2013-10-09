@@ -22,3 +22,4 @@
     force=yes
 
 - include: mysql.yml
+- include: keystone.yml
