@@ -5,8 +5,6 @@ service_users:
     password: $nova_identity_password
   - name: ec2
     password: $ec2_identity_password
-  - name: swift
-    password: $swift_identity_password
   - name: quantum
     password: $quantum_identity_password
   - name: cinder

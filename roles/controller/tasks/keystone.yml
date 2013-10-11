@@ -58,7 +58,7 @@
 
 - name: add services
   keystone_service: >
-    token=$admin_token
+    token={{ admin_token }}
     name=${item.name}
     type=${item.type}
     description="${item.description}"
