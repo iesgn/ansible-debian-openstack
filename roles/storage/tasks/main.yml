@@ -4,3 +4,5 @@
     dest=/etc/cron.daily/ntpdate 
     owner=root group=root mode=0755
   notify: stop ntp service
+
+- include: glance.yml

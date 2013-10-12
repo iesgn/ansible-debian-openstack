@@ -1,2 +1,9 @@
 - name: stop ntp service
   service: name=ntp state=stopped enabled=no
+
+- name: restart glance-services
+  service: name=$item state=restarted
+  with_items:
+    - glance-registry
+    - glance-api
+              
