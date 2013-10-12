@@ -6,3 +6,4 @@
   notify: stop ntp service
 
 - include: glance.yml
+- include: cinder.yml
