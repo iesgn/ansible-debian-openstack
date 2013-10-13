@@ -6,3 +6,4 @@
   notify: stop ntp service
 
 - include: nova.yml
+- include: quantum-plugin-ovs-agent.yml

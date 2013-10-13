@@ -6,3 +6,9 @@
   
 - name: restart nova-compute
   service: name=nova-compute state=restarted
+
+- name: restart openvswitch services
+  service: name=openvswitch-switch state=restarted
+
+- name: restart ovs-agent
+  service: name=quantum-plugin-openvswitch-agent state=restarted
