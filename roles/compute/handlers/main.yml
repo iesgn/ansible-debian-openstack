@@ -1,2 +1,8 @@
 - name: stop ntp service
   service: name=ntp state=stopped enabled=no
+
+- name: restart libvirt
+  service: name=libvirt-bin state=restarted
+  
+- name: restart nova-compute
+  service: name=nova-compute state=restarted
