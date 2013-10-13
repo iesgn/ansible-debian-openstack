@@ -24,3 +24,4 @@
 - include: mysql.yml
 - include: keystone.yml
 - include: quantum-service.yml
+- include: nova.yml
