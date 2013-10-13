@@ -9,3 +9,6 @@
 
 - name: start keystone
   service: name=keystone state=started
+
+- name: restart quantum-server
+  service: name=quantum-server state=restarted
