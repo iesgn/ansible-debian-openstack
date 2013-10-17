@@ -9,7 +9,7 @@ Vagrant.configure("2") do |config|
     controller.vm.network :private_network, ip: "192.168.122.101" # eth2 external
     controller.vm.provider "virtualbox" do |vbox|
       vbox.customize ["modifyvm", :id, "--memory", "768"]
-#      vbox.customize ["modifyvm", :id, "--nicpromisc3", "allow-all"] # eth2
+      vbox.customize ["modifyvm", :id, "--nicpromisc3", "allow-all"] # eth2
     end
   end
 

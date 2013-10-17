@@ -12,3 +12,17 @@
 
 - name: restart quantum-server
   service: name=quantum-server state=restarted
+
+- name: restart ovs-agent
+  service: name=quantum-plugin-openvswitch-agent state=restarted
+  
+- name: restart quantum agents
+  service: name=$i state=restarted
+  with_items:
+    - quantum-l3-agent
+    - quantum-dhcp-agent
+    - quantum-lbaas-agent
+    - quantum-metadata-agent
+    
+- name: restart openvswitch services
+  service: name=openvswitch-switch state=restarted

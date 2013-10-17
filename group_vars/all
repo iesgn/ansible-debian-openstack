@@ -34,3 +34,7 @@ admin_pass: "asdasd"
 # Log verbosity
 log_debug: True
 log_verbose: True
+
+# Quantum
+ext_net_nic: eth2
+shared_secret: "asdasd"
