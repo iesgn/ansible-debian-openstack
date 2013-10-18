@@ -17,7 +17,7 @@
   service: name=quantum-plugin-openvswitch-agent state=restarted
   
 - name: restart quantum agents
-  service: name=$i state=restarted
+  service: name=$item state=restarted
   with_items:
     - quantum-l3-agent
     - quantum-dhcp-agent
@@ -26,3 +26,9 @@
     
 - name: restart openvswitch services
   service: name=openvswitch-switch state=restarted
+
+- name: restart web services
+  service: name=$item state=restarted
+  with_items:
+    - apache2
+    - memcached

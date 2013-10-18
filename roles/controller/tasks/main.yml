@@ -26,3 +26,4 @@
 - include: quantum-service.yml
 - include: nova.yml
 - include: quantum-agents.yml
+- include: horizon.yml
