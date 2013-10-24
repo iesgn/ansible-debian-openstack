@@ -1,3 +1,6 @@
+- name: ensure sudo is installed
+  apt: name=sudo state=present
+
 - name: install ntpdate daily cron job
   template: >
     src=etc/cron.daily/ntpdate 
