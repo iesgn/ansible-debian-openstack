@@ -35,7 +35,7 @@
     - restart cinder services
 
 - name: ensure vg is created
-  lvg: vg=cinder-volumes pvs=/dev/sdb
+  lvg: vg=cinder-volumes pvs={{ physical_device }}
   notify: 
     - sync cinder db
     - restart cinder services
