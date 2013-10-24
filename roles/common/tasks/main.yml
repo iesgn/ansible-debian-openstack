@@ -13,3 +13,6 @@
     url=http://ftp.gplhost.com/debian/repository_key.asc
     state=present
   notify: apt update
+
+- name: Ensure proper system variables are setting
+  sysctl: name=net.ipv4.ip_forward value=1 state=present
