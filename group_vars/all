@@ -8,9 +8,6 @@ controller_external_ip: 192.168.122.101
 storage_ip: 192.168.222.111
 storage_external_ip: 192.168.122.111
 
-# NIC used for external bridge
-ext_net_nic: eth2
-
 # MySQL passwords
 root_db_password: "asdasd" 
 keystone_db_password: "asdasd"
